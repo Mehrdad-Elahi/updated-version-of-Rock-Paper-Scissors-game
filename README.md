@@ -1,7 +1,7 @@
-# Rock Paper Scissors 🪨📄✂️
+# Updated Rock Paper Scissors 🪨📄✂️
 A browser-based Rock Paper Scissors game built with vanilla HTML, CSS, and JavaScript, built as a beginner practice project to learn JS fundamentals and DOM manipulation.
 
-🔗 **[Live Demo](https://Mehrdad-Elahi.github.io/RPS-game-Autoplay/RPS.html)**
+🔗 **[Live Demo]( https://mehrdad-elahi.github.io/updated-version-of-Rock-Paper-Scissors-game/)**
 
 ## About
 This project recreates the classic Rock Paper Scissors game in the browser. The player picks a move by clicking an icon, using keyboard shortcuts, or letting an auto-play mode run the game on its own, and the result (win/lose/tie) is displayed instantly along with a running score — built as a hands-on project to practice JavaScript, DOM manipulation, and event listeners.
