@@ -145,8 +145,11 @@ function autoplay(){
         },1000);
         
         isAutoPlaying = true;
+        document.querySelector('.js_autoplay'). innerHTML = 'stop'
     }else{
         clearInterval(intervalId);
         isAutoPlaying = false;
+        document.querySelector('.js_autoplay'). innerHTML = 'auto play'
     }
 }
+
