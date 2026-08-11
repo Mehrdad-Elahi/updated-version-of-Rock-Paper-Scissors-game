@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors game using DOM</title>
+        <!-- Linking the external stylesheet that styles the emoji buttons and text -->
+        <link rel="stylesheet" href="RPS_advanced.css">
+    </head>
+    <body>
+        <p>Rock-Paper-Scossors game</p>
+
+        <!--
+            Three clickable "move" images (rock, paper, scissors).
+            Each one calls playGame() from RPS.js directly via onclick,
+            passing the player's chosen move as a string.
+        -->
+        <img onclick="playGame('rock')" src="icons/rock-emoji.png" class="
+        icons_css">
+
+        <img onclick="playGame('paper')" src="icons/paper-emoji.png" class="
+        icons_css js_paper_button">
+
+        <img onclick="playGame('scissors')" src="icons/scissors-emoji.png" class="
+        icons_css" class="icons_css_for_result">
+
+        <!-- Filled in by JS with "you win" / "you lose" / "Tie" -->
+        <p class="js_result"></p>
+
+        <!-- Filled in by JS with the player's and computer's chosen emoji icons -->
+        <p class="js_items_chosen"></p>
+
+        <!-- Filled in by JS with the running win/lose/tie tally -->
+        <p class="js_save_scores"></p>
+
+        <!--
+            Reset button: clears the score object in memory, removes the
+            saved scores from localStorage, then refreshes the score text
+            and clears the result/last-picks paragraphs.
+            (Inline JS here works because RPS.js is loaded before this
+            button is clicked, so recordGame/updateScore/etc. already exist.)
+        -->
+        <button onclick="
+        recordGame.wins = 0;
+        recordGame.loses = 0;
+        recordGame.ties = 0;
+        localStorage.removeItem('scores')
+        updateScore()
+        itemChosen.innerHTML = ' '
+        resultParagraph.innerHTML = ' '
+        ">Reset button</button>
+        <button onclick="autoplay()">Auto play</button>
+    </body>
+    <!-- Loaded at the end of body so the DOM elements above already exist when RPS.js runs -->
+    <script src="RPS_advanced.js"></script>
+</html>
